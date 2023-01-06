@@ -45,6 +45,7 @@
 device driver(장치 구동기) : OS 코드 중 각 장치별 처리 루틴 -> software
 device controller(장치 제어기) : 각 장치를 통제하는 일종의 작은 CPU -> hardware
 
+&nbsp;
 
 ## 2. 입출력(I/O)의 수행
 - 모든 입출력 명령은 특권 명령
