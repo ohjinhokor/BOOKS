@@ -4,6 +4,7 @@
 
 ## 1. 컴퓨터 시스템 구조
 #### CPU, Memory, Disk, I/D device
+![스크린샷 2023-01-06 오후 9 48 24](https://user-images.githubusercontent.com/71378447/211041566-5d5ab49a-772a-45ed-be87-95e474bd3c07.png)
 
 &nbsp;
 
