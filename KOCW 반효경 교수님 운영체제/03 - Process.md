@@ -83,7 +83,7 @@
 
 - CPU가 다른 프로세스에게 넘어갈 때 운영체제는 다음을 수행
   - CPU를 내어주는 프로세스의 상태를 그 프로세스의 PCB에 저장
-  - CPU를 새롭게 얻는 프로세스의 상태를 PCB에 저장
+  - CPU를 새롭게 얻는 프로세스의 상태를 PCB에서 
 
 
 <img width="785" alt="스크린샷 2023-01-24 오후 10 08 34" src="https://user-images.githubusercontent.com/71378447/214326815-92d9997b-29bd-490b-80d1-ce81063b2fd7.png">
