@@ -114,8 +114,80 @@
 
 <img width="816" alt="image" src="https://user-images.githubusercontent.com/71378447/215264947-83abfcf7-3839-4143-8b81-63ae0540c8a9.png">
 
+<img width="608" alt="스크린샷 2023-01-28 오후 8 58 06" src="https://user-images.githubusercontent.com/71378447/215267583-66891382-f4df-4cb1-980e-2019303ac511.png">
 
 &nbsp;
 &nbsp;
 &nbsp;
+
+
+## Multilevel Queue
+
+<img width="609" alt="스크린샷 2023-01-28 오후 9 23 08" src="https://user-images.githubusercontent.com/71378447/215267603-12ffca17-947a-41bd-a583-79a2a532f730.png">
+
+<img width="607" alt="스크린샷 2023-01-28 오후 9 23 39" src="https://user-images.githubusercontent.com/71378447/215267622-b4cf6f50-8e37-47bb-bc13-78438e252c15.png">
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+## Multilevel Feedback Queue
+
+<img width="607" alt="image" src="https://user-images.githubusercontent.com/71378447/215267764-e8336119-9d61-4bde-ac5c-14a89f111400.png">
+
+<img width="604" alt="스크린샷 2023-01-28 오후 9 29 39" src="https://user-images.githubusercontent.com/71378447/215267657-2ea2b209-4667-41b0-b986-8bdf52a235f7.png">
+
+<img width="607" alt="image" src="https://user-images.githubusercontent.com/71378447/215267791-e21538ad-f8d3-4ab0-85fe-3901861cc49b.png">
+
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+
+## Multiple-Processor Scheduling (CPU가 여러개인 경우)
+
+- CPU가 여러 개인 경우 스케줄링은 더욱 복잡해짐
+
+- Homogeneous processor인 경우
+  - Queue에 한 줄로 세워서 각 프로세서가 알아서 꺼내가게 할 수 있다.
+  - 반드시 특정 프로세서에서 수행되어야 하는 프로세스가 있는 경우에는 문제가 더 복잡해짐
+  
+- Load Sharing
+  - 일부 프로세서에 job이 몰리지 않도록 부하를 적절히 공유하는 메커니즘 필요
+  - 별개의 큐를 두는 방법 vs 공동 큐를 사용하는 방법
+  
+- Symmetric Multiprocessing (SMP)
+
+  - 각 프로세서가 각자 알아서 스케줄링 결정
+  
+- Asymmetric Multiprocessing
+  - 하나의 프로세서가 시스템 데이터의 접근과 공유를 책임지고 나머지 프로세서는 거기에 다름
+  
+  
+## Real-Time Scheduling
+
+- Hard real-time systems
+  - Hard real-time task는 정해진 시간 안에 반드시 끝내도록 스케줄링 해야함
+  
+- Soft real-time computing
+  - Soft real-time task는 일반 프로세스에 비해 높은 priority를 갖도록 해야함
+  
+
+
+## Thread Scheduling
+
+- Local Scheduling
+
+  - User level thread의 경우 사용자 수준의 thread library에 의해 어떤 thread를 스케줄할지 결정
+  
+- Global Scheduling
+  - Kernel level thread의 경우 일반 프로세스와 마찬가지로 커널의 단기 스케줄러가 어떤 thread를 스케줄할지 결정
+  
+
+## Algorithm Evaluation
+
+<img width="607" alt="image" src="https://user-images.githubusercontent.com/71378447/215267681-b9a9146e-0839-428e-9283-0389a831744f.png">
+
 
