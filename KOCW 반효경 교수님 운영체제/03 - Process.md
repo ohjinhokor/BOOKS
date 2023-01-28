@@ -139,4 +139,40 @@
   - degree of Multiprogrammiing을 제어
   
   
+  ## Thread
+
+> A **thread** (or lightweight process) is a basic unit of CPU utilizatioon
+
+- Thread의 구성
+  - program counter
+  - register set
+  - stack space
+  
+  
+- Thread가 동료 thread와 공유하는 부분 
+  - code section
+  - data section
+  - OS resources
+  
+- 전통적인 개념의 heavyweight process는 하나의 thread를 가지고 있는 task로 볼 수 있다.
+
+
+<img width="609" alt="스크린샷 2023-01-28 오후 5 02 44" src="https://user-images.githubusercontent.com/71378447/215254822-c6c6177e-956b-4124-9d58-525b054b7cdc.png">
+
+
+  
+- 아래 사진에서 알 수 있듯이 PCB의 register와 program counter는 여러 쓰레드의 register와 program counter를 담고 있다.
+
+
+<img width="608" alt="스크린샷 2023-01-28 오후 5 03 06" src="https://user-images.githubusercontent.com/71378447/215254825-366ed874-ea32-40c3-b3f2-9e36c5c13a23.png">
+
+
+
+#### 스레드의 장점
+
+- 다중 쓰레드로 구성된 태스크 구조에서는 하나의 서버 스레드가 blocked(waiting) 상태인 동안에도 동일한 태스크 내의 다른 스레드가 실행되어 빠른 처리를 할 수 있다.
+
+- 동일한 일을 수행하는 다중 스레드가 협력하여 높은 처리율(throughput)과 성능 향상을 얻을 수 있다.
+
+- 스레드를 사용하면 병렬성을 높일 수 있다.
   
