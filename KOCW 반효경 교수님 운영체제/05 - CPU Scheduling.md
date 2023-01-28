@@ -43,9 +43,6 @@
 ## Scheduling Criteria (성능 척도)
 
 
-<img width="815" alt="스크린샷 2023-01-28 오후 7 36 51" src="https://user-images.githubusercontent.com/71378447/215264783-7488f379-9949-42ab-8ab6-4724c68eb774.png">
-
-
 - 시스템 입장에서의 성능 척도
   - CPU utilizatioin (이용률)
     - cpu가 놀지 않고 일한 시간
@@ -64,6 +61,8 @@
     - ready queue에서 기다리는 시간
   - Response time (응답 시간)
     - ready queue에 들어와서 처음으로 cpu를 얻기까지 걸린 시간
+
+<img width="815" alt="스크린샷 2023-01-28 오후 7 36 51" src="https://user-images.githubusercontent.com/71378447/215264783-7488f379-9949-42ab-8ab6-4724c68eb774.png">
 
 
 ## FCFS (First-Come First-Served)
