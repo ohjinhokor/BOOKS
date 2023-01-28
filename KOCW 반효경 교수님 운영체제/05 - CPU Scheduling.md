@@ -67,12 +67,11 @@
 
 ## FCFS (First-Come First-Served)
 
-&nbsp;
-
 <img width="819" alt="image" src="https://user-images.githubusercontent.com/71378447/215264830-d30cac9f-a7e8-415c-8868-1fc7b8095bec.png">
 
 <img width="816" alt="image" src="https://user-images.githubusercontent.com/71378447/215264839-17c4ec72-5181-48dc-9e48-e81d31898874.png">
 
+&nbsp;
 &nbsp;
 &nbsp;
 
@@ -81,14 +80,12 @@
 - 기아 문제가 발생함
 - CPU 사용 시간을 정확히 아는 것은 불가능 함
 
-
-&nbsp;
-
 <img width="820" alt="image" src="https://user-images.githubusercontent.com/71378447/215264855-bddde5d2-fe91-4eb8-97e4-d8e00edf1289.png">
 
 <img width="816" alt="image" src="https://user-images.githubusercontent.com/71378447/215264868-5d91a404-07b4-4701-8fd0-e2a362e6cb1e.png">
 
 
+&nbsp;
 &nbsp;
 &nbsp;
 
@@ -97,23 +94,21 @@
 - 우선 순위가 가장 높은 프로세스에게 cpu를 할당함
 - SJF도 Priority scheduling 중 하나이다
 
-
-&nbsp;
-
 <img width="813" alt="image" src="https://user-images.githubusercontent.com/71378447/215264899-d3b0755d-ed33-4ff3-8a2b-5f1e2bcdafb0.png">
 
 <img width="814" alt="image" src="https://user-images.githubusercontent.com/71378447/215264916-688ee1a6-c8a7-45b4-97a8-e3a16cae414d.png">
 
 
+
+
 &nbsp;
 &nbsp;
+&nbsp;
+
 
 ## Round Robin(RR)
 
 - 현대 운영체제는 라운드 로빈에 기반함
-
-
-&nbsp;
 
 <img width="813" alt="image" src="https://user-images.githubusercontent.com/71378447/215264932-59c0b12d-b813-4b2d-b73d-b940726b7e83.png">
 
@@ -122,3 +117,5 @@
 
 &nbsp;
 &nbsp;
+&nbsp;
+
