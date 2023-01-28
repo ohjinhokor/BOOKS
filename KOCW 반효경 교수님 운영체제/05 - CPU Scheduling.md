@@ -73,6 +73,8 @@
 
 <img width="816" alt="image" src="https://user-images.githubusercontent.com/71378447/215264839-17c4ec72-5181-48dc-9e48-e81d31898874.png">
 
+&nbsp;
+&nbsp;
 
 ## SJF (Shortest-Job-First)
 
@@ -87,6 +89,9 @@
 <img width="816" alt="image" src="https://user-images.githubusercontent.com/71378447/215264868-5d91a404-07b4-4701-8fd0-e2a362e6cb1e.png">
 
 
+&nbsp;
+&nbsp;
+
 ## Priority Scheduling
 
 - 우선 순위가 가장 높은 프로세스에게 cpu를 할당함
@@ -100,6 +105,9 @@
 <img width="814" alt="image" src="https://user-images.githubusercontent.com/71378447/215264916-688ee1a6-c8a7-45b4-97a8-e3a16cae414d.png">
 
 
+&nbsp;
+&nbsp;
+
 ## Round Robin(RR)
 
 - 현대 운영체제는 라운드 로빈에 기반함
@@ -112,3 +120,5 @@
 <img width="816" alt="image" src="https://user-images.githubusercontent.com/71378447/215264947-83abfcf7-3839-4143-8b81-63ae0540c8a9.png">
 
 
+&nbsp;
+&nbsp;
