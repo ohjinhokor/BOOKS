@@ -168,11 +168,22 @@
 
 
 
-#### 스레드의 장점
+## 스레드의 장점
 
 - 다중 쓰레드로 구성된 태스크 구조에서는 하나의 서버 스레드가 blocked(waiting) 상태인 동안에도 동일한 태스크 내의 다른 스레드가 실행되어 빠른 처리를 할 수 있다.
 
 - 동일한 일을 수행하는 다중 스레드가 협력하여 높은 처리율(throughput)과 성능 향상을 얻을 수 있다.
 
 - 스레드를 사용하면 병렬성을 높일 수 있다.
-  
+
+
+&nbsp;
+
+
+<img width="609" alt="스크린샷 2023-01-28 오후 5 15 23" src="https://user-images.githubusercontent.com/71378447/215255467-71fb0ade-8cea-4d10-bf6a-bd7a9263646a.png">
+
+
+<img width="606" alt="스크린샷 2023-01-28 오후 5 12 28" src="https://user-images.githubusercontent.com/71378447/215255398-1093e362-b9b5-407b-a3f0-50308958bcb0.png">
+
+
+<img width="606" alt="스크린샷 2023-01-28 오후 5 21 15" src="https://user-images.githubusercontent.com/71378447/215255476-bcccc2c0-c97b-4690-bf4b-c9fe67f2b865.png">
