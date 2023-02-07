@@ -150,3 +150,67 @@
   
   - 예를 들어 프로세스0과 1이 모두 P(S)를 먼저 하게 한다면 데드락이 발생하지 않게 된다.
 
+  
+## Classical Problems of Synchronization
+
+### 1. Bounded-Buffer Problem(Producer-Consumer Problem). 생산자-소비자 문제
+
+<img width="610" alt="스크린샷 2023-02-08 오전 1 23 52" src="https://user-images.githubusercontent.com/71378447/217323194-951ceb88-51c3-4d47-ab1f-7a4a8bcf2d32.png">
+
+<img width="609" alt="스크린샷 2023-02-08 오전 1 36 24" src="https://user-images.githubusercontent.com/71378447/217323425-b7f6496f-f9bb-4482-ba54-1e5575596445.png">
+
+
+### 2. Readers and Writers Problem
+
+<img width="606" alt="스크린샷 2023-02-08 오전 1 43 57" src="https://user-images.githubusercontent.com/71378447/217323444-6e7b5989-e8b3-48d5-b2f3-2d14589784c4.png">
+
+
+- 참고 : 아래 그림에서 
+Reader 밑에 readcount는 공유 변수다. 따라서 readcount를 동시에 접근하여 문제가 발생하지 않도록 P(mutex)와 V(mutex)를 readcount를 사용하는 앞뒤로 추가한다.
+
+<img width="608" alt="스크린샷 2023-02-08 오전 1 44 08" src="https://user-images.githubusercontent.com/71378447/217323473-8d5a6640-38c8-4338-81a0-624cbc477de1.png">
+
+### 3. Dining Philosophers Problem
+
+<img width="606" alt="스크린샷 2023-02-08 오전 2 13 00" src="https://user-images.githubusercontent.com/71378447/217323512-befab5f5-df06-4fee-a291-02ff0a9b5651.png">
+
+
+- 위의 사진 코드의 문제점
+  - Deadlock 가능성이 있다
+  - 모든 철학자가 동시에 배가 고파져 왼쪽 젓가락을 집어버린 경우
+  
+- 해결 방안
+  - 4명의 철학자만이 테이블에 동시에 앉을 수 있도록 한다.
+  - 젓가락을 두 개 모두 집을 수 있을 때에만 젓가락을 집을 수 있게 한다.
+  - 비대칭
+    - 짝수(홀수) 철학자는 왼쪽(오른쪽) 젓가락부터 집도록 한다.
+    
+  
+<img width="604" alt="스크린샷 2023-02-08 오전 2 19 29" src="https://user-images.githubusercontent.com/71378447/217323611-54776a5a-6a0a-4ba9-8e7d-32abe73d7558.png">
+
+    
+
+## Monitor
+
+- 세마포어의 문제점
+  - 코딩하기 힘들다
+  
+  - 정확성의 입증이 어렵다
+  - 자발적 협력이 필요하다
+  - 한 번의 실수가 모든 시스템에 치명적 영향
+  
+  
+ ### 세마포어를 사용한 실수 예시
+ <img width="545" alt="스크린샷 2023-02-08 오전 2 37 39" src="https://user-images.githubusercontent.com/71378447/217323717-d2154bf1-e66f-4b0b-bb44-bdad4c990263.png">
+
+
+  ### 모니터 구현 상세
+  
+<img width="607" alt="스크린샷 2023-02-08 오전 2 39 10" src="https://user-images.githubusercontent.com/71378447/217323755-2049e014-7ebf-4ca2-be42-2a511605f318.png">
+
+
+<img width="609" alt="스크린샷 2023-02-08 오전 2 39 56" src="https://user-images.githubusercontent.com/71378447/217323773-8df31340-47c9-4234-a92d-39c65a9b13b7.png">
+
+
+<img width="603" alt="스크린샷 2023-02-08 오전 2 41 15" src="https://user-images.githubusercontent.com/71378447/217323787-7cad9193-133e-4b39-8ff4-b8f40f080efc.png">
+
