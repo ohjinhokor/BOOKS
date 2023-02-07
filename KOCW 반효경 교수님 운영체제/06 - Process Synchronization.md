@@ -16,16 +16,16 @@
 
 #### OS 에서 race condition은 언제 발생하는가?
 
-- kernel 수행 중 인터럽트 발생 시
+#### 1. kernel 수행 중 인터럽트 발생 시
 
 <img width="607" alt="스크린샷 2023-02-07 오후 10 33 03" src="https://user-images.githubusercontent.com/71378447/217265163-5fcf3274-c5db-460e-8e8a-0b9f3bae1bf8.png">
 
-- Process가 system call을 하여 kernel mode로 수행 중인데, context switch가 일어나는 경우
+#### 2. Process가 system call을 하여 kernel mode로 수행 중인데, context switch가 일어나는 경우
 
 <img width="609" alt="스크린샷 2023-02-07 오후 10 35 08" src="https://user-images.githubusercontent.com/71378447/217265200-dcc20f1b-5de9-45d8-a395-92306476e729.png">
 
 
-- Multiprocessor에서 shared memory 내의 kernel data
+#### 3. Multiprocessor에서 shared memory 내의 kernel data
 
 <img width="608" alt="스크린샷 2023-02-07 오후 10 38 13" src="https://user-images.githubusercontent.com/71378447/217265236-cc8eaff7-0d74-4811-9d54-b48af6e35b8c.png">
 
