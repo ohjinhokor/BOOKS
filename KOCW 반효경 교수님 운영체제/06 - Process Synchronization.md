@@ -14,7 +14,7 @@
 
 ## OS에서의 Race Condition
 
-#### OS 에서 race condition은 언제 발생하는가?
+### OS 에서 race condition은 언제 발생하는가?
 
 #### 1. kernel 수행 중 인터럽트 발생 시
 
