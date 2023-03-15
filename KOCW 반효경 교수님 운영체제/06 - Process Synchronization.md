@@ -214,3 +214,22 @@ Reader 밑에 readcount는 공유 변수다. 따라서 readcount를 동시에 �
 
 <img width="603" alt="스크린샷 2023-02-08 오전 2 41 15" src="https://user-images.githubusercontent.com/71378447/217323787-7cad9193-133e-4b39-8ff4-b8f40f080efc.png">
 
+<img width="606" alt="스크린샷 2023-03-15 오후 5 55 31" src="https://user-images.githubusercontent.com/71378447/225257576-cb2b8155-a304-4de3-b83f-fb51fc445d47.png">
+
+- 위 그림에 나온 코드에 대한 간단한 설명
+  - 모니터 안에 produce와 consume
+  
+  - produce
+    - 만약 empty buffer가 없으면 empty.wait()를 함.
+    - 그 후 empty.signal()을 받거나 empty buffer가 있으면 x를 buffer에 추가함
+    - buffer에 데이터가 들어오기를 기다리고 있는 쓰레드가 있을 수 있으므로 full.signal()
+  
+  - consume은 produce와 반대
+  
+  
+### 식사하는 철학자 문제를 모니터로 해결하는 코드
+  
+  
+<img width="608" alt="스크린샷 2023-03-15 오후 8 16 59" src="https://user-images.githubusercontent.com/71378447/225293573-ff4a0758-d9aa-4e53-a2d5-116dcf4e2bb6.png">
+
+  
