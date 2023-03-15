@@ -118,3 +118,43 @@
 
 
 <img width="606" alt="스크린샷 2023-03-15 오후 9 25 43" src="https://user-images.githubusercontent.com/71378447/225309334-efc3c3ad-11f1-4e8b-86aa-5178cdefb040.png">
+
+
+### Deadlock Detection and recovery
+
+- Deadlock Detection
+  - Resource type당 single instance인 경우
+    - 자원 할당 그래프에서의 cycle이 곧 deadlock을 의미
+  - resource type당 multiple instance인 경우
+    - Banker's algorithm과 유사한 방법 활용
+
+- wait for graph 알고리즘
+  - Resource type당 single instance인 경우
+  - wait-for graph
+    - 자원 할당 그래프의 변형
+    - 프로세스만으로 node 구성
+    - Pi가 가지고 있는 자원을 Pk가 기다리는 경우 : Pk -> Pi
+  - Algorithm
+    - wait-for graph에 사이클이 존재하는지를 주기적으로 조사
+    - 시간복잡도 : n제곱
+    
+  
+<img width="605" alt="스크린샷 2023-03-15 오후 9 42 49" src="https://user-images.githubusercontent.com/71378447/225315062-85634a26-9671-41f4-8613-5fb4e0acfc4c.png">
+
+<img width="598" alt="스크린샷 2023-03-15 오후 9 50 00" src="https://user-images.githubusercontent.com/71378447/225315112-c8b9210b-9faa-4cd1-a115-0089d2ef3c97.png">
+
+<img width="607" alt="스크린샷 2023-03-15 오후 9 52 42" src="https://user-images.githubusercontent.com/71378447/225315144-624826af-d2e2-4449-8003-f1f7634f26f6.png">
+
+
+
+- Recovery
+  - Process termination
+    - Abort all deadlocked processes
+    - Abort one process at a time until the deadlock cycle is eliminated
+    
+  - Resource Preemption
+    - 비용을 최소화 할 victim의 선정
+    - safe state로 rollback하여 process를 restart
+    - Starvatioin문제
+      - 동일한 프로세스가 계속해서 victim으로 선정되는 경우
+      - cost factor에 rollback 횟수도 같이 고려
