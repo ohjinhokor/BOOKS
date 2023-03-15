@@ -10,9 +10,10 @@
   - 프로세스가 자원을 사용하는 절차
     - Request, Allocate, Use, Release
   
+
   - Deadlock Example
-  (사진1)
   
+  <img width="370" alt="스크린샷 2023-03-15 오후 8 27 29" src="https://user-images.githubusercontent.com/71378447/225309107-b8e7afa1-e4b6-4653-8666-21898ecb8bb4.png">
   
 ## Deadlock 발생의 4가지 조건
 
@@ -33,7 +34,10 @@
   - 자원 -> 프로세스 (사용 중)
 
 
-(사진2)
+<img width="606" alt="스크린샷 2023-03-15 오후 8 34 03" src="https://user-images.githubusercontent.com/71378447/225309163-eeff32c2-c26e-4541-a386-3aca374ddca3.png">
+
+
+
 
 ## Deadlock의 처리 방법
 > Prevention, Avoidance : 미연에 방지
@@ -94,13 +98,23 @@
     - p(i-1)이 종료되면 pi의 자원요청을 만족시켜 수행한다.
     
 
-(사진3)
+<img width="606" alt="스크린샷 2023-03-15 오후 9 17 37" src="https://user-images.githubusercontent.com/71378447/225309222-56348bba-ed17-4fbc-ab71-57a860d91239.png">
+
 
 
 ### Resource Allocation Graph algorithm
 
-(사진4)
+
+<img width="608" alt="스크린샷 2023-03-15 오후 9 21 37" src="https://user-images.githubusercontent.com/71378447/225309252-e9171606-8aac-4d02-8506-7b9b5f9c7de7.png">
 
 
 ### Banker's Algorithm
-(사진5)
+
+<img width="604" alt="스크린샷 2023-03-15 오후 9 27 34" src="https://user-images.githubusercontent.com/71378447/225309277-e2cbf7cf-c30a-4e4a-8bf1-d031f24e7ad7.png">
+
+
+
+<img width="605" alt="스크린샷 2023-03-15 오후 9 24 49" src="https://user-images.githubusercontent.com/71378447/225309308-822be35b-1e3a-4a25-8bec-2036781d16b5.png">
+
+
+<img width="606" alt="스크린샷 2023-03-15 오후 9 25 43" src="https://user-images.githubusercontent.com/71378447/225309334-efc3c3ad-11f1-4e8b-86aa-5178cdefb040.png">
