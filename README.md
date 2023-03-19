@@ -1,9 +1,1 @@
-## BOOKS-and-LECTURES
-
-
-### 진행 중
-- 리눅스 시스템 프로그래밍
-- 반효경 교수님 운영체제
-
-### 보류
-- 양희재 교수님 운영체제
+BOOKS-and-LECTURES
