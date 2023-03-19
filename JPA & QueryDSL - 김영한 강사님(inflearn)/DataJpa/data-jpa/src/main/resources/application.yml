@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/datajpa
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        # show_sql: true // jpa의 쿼리를 콘솔에 다 찍어줌
+        format_sql: true
+
+  #pageable 설정
+  data:
+    web:
+      pageable:
+        default-page-size: 10
+        max-page-size: 2000
+
+logging.level:
+  org.hibernate.SQL: debug
+# org.hibernate.type: trace
+
+
+
+
+
+
