@@ -8,8 +8,23 @@
 
 &nbsp;
 
-~~Vim.. 이 양파 같은 ..~~
+## vim 사용 꿀팁
+  - ~/.vimrc에 들어가서 set tabstop으로 값을 설정하면 tab 길이 조절 가능.. ~~최근에야 알았다..~~
+  
+  - ctags를 사용하면 vim 안에서 함수 구현체로 바로 이동할 수 있음
+    - [참고 블로그] https://bowbowbow.tistory.com/15
+ 
+  - grep
+    - grep -rn "bread" -> bread라는 문자열이 쓰인 곳을 찾아줌
 
+
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+
+
+~~Vim.. 이 양파 같은 ..~~
 <br>
 &nbsp;
 
