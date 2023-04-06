@@ -36,7 +36,8 @@
   - 하드웨어적인 지원이 필요함(base and limit register, MMU)
   
 
-(사진1)
+<img width="612" alt="스크린샷 2023-03-29 오후 12 44 43" src="https://user-images.githubusercontent.com/71378447/230349312-8e0f4d16-6a62-4e2a-9d75-85f160b3a021.png">
+
 
 
 ** 현대 운영체제는 주로 run time binding을 사용함**
@@ -52,11 +53,12 @@
   - 사용자 프로세스가 CPU에서 수행되며 생성해내는 모든 주솟값에 대해 base register(=relocation register)의 값을 더한다.
 
 
+<img width="610" alt="스크린샷 2023-03-29 오후 12 55 58" src="https://user-images.githubusercontent.com/71378447/230349336-ee814888-16d8-491f-baaf-04c4ef663e8f.png">
 
-(사진2)
+
+<img width="608" alt="스크린샷 2023-03-29 오후 12 59 48" src="https://user-images.githubusercontent.com/71378447/230349357-528d9982-349b-45e5-a383-e2e2c91376fe.png">
 
 
-(사진3)
 
 
 - user program
@@ -107,7 +109,9 @@
   - swap time은 대부분 transfer time(swap되는 양에 비례하는 시간)임
   
   
-(사진4)
+  <img width="603" alt="스크린샷 2023-04-06 오전 11 03 52" src="https://user-images.githubusercontent.com/71378447/230349399-d874589a-7b20-45a3-b4d5-f70bf3ed7630.png">
+
+
   
 
 ### Dynamic Linking
@@ -129,7 +133,8 @@
 
 ## Allocation of Physical Memory
 
-(사진5)
+<img width="607" alt="스크린샷 2023-04-06 오전 11 25 00" src="https://user-images.githubusercontent.com/71378447/230349453-18897905-b43b-4a7d-b2c3-8233bee93f4d.png">
+
 
 ### Continuous Allocation
 
@@ -149,13 +154,15 @@
     - 기술적 관리 기법 필요
     - External fragmentation 발생
     
-  
-(사진6)
+  <img width="603" alt="스크린샷 2023-04-06 오전 11 39 44" src="https://user-images.githubusercontent.com/71378447/230349492-5ae29109-1196-4dab-8c4c-453f31f1b288.png">
 
-(사진7)
 
-(사진8)
- 
+
+<img width="603" alt="스크린샷 2023-04-06 오전 11 43 01" src="https://user-images.githubusercontent.com/71378447/230349525-1eef0d9f-9e80-4954-9b71-61ce3f2a0831.png">
+
+
+ <img width="607" alt="스크린샷 2023-04-06 오전 11 44 52" src="https://user-images.githubusercontent.com/71378447/230349563-6b126765-29f9-42be-addf-e0ffe50c9661.png">
+
 
 ## Paging
 
