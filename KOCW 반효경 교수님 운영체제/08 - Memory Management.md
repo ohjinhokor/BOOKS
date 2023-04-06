@@ -1,0 +1,173 @@
+# Memory Management
+
+
+## Logical &nbsp; vs   &nbsp; Physical Address
+
+- Logical address(=virtual address)
+  - 프로세스마다 독립적으로 가지는 주소 공간
+  - 각 프로세스마다 0번지부터 시작
+  - CPU가 보는 주소는 logical address임
+  
+- Physical address
+  - 메모리에 실제 올라가는 위치
+  
+- 주소 바인딩 : 주소를 결정하는 것
+  - Symbolic Address -> Logical Address -> Physical address
+  
+  - **Logical Address가 Physical address로 매핑되는 과정이 어떻게 일어날까?-> 중요**
+    - MMU가 Logical Address를 Physical address로 바꿔줌
+
+
+## 주소 바인딩
+
+- Compile time binding
+  - 물리적 메모리 주소(physical address)가 컴파일 시 알려짐
+  - 시작 위치 변경시 재컴파일
+  
+  - 컴파일러는 절대 코드(absolute code)생성
+  
+- Load time binding : ram에 프로그램을 올리는 시점에 바인딩 함
+  - Loader의 책임하에 물리적 메모리 주소 부여
+  - 컴파일러가 재배치가능코드(relocatable code)를 생성한 경우 가능
+  
+- **Execution time binding (= Run time binding)**
+  - 수행이 시작된 이후에도 프로세스의 메모리 상 위치를 옮길 수 있음.
+  - CPU가 주소를 참조할 때마다 binding을 점검(address mapping table)
+  - 하드웨어적인 지원이 필요함(base and limit register, MMU)
+  
+
+(사진1)
+
+
+** 현대 운영체제는 주로 run time binding을 사용함**
+**따라서 cpu가 바라보는 주소는 logical address임!**
+
+
+## MMU(Memory Management Unit)
+
+- MMU(Memory Management Unit)
+  - logical address를 physical address로 매핑해주는 Hardware device
+  
+- MMU scheme
+  - 사용자 프로세스가 CPU에서 수행되며 생성해내는 모든 주솟값에 대해 base register(=relocation register)의 값을 더한다.
+
+
+
+(사진2)
+
+
+(사진3)
+
+
+- user program
+  - logical address만을 다룬다.
+  - 실제 physical address를 볼 수 없으며, 알 필요가 없다.
+  
+
+### Dynamic Loading
+
+ - 프로세스 전체를 메모리에 미리 다 올리는 것이 아니라 해당 루틴이 불려질 때 메모리에 load하는 것
+ 
+ - memory utilization의 향상
+ 
+ - 가끔씩 사용되는 많은 양의 코드의 경우 유용
+   - ex) 오류 처리 루틴
+   
+ - 운영체제의 특별한 지원 없이 프로그램 자체에서 구현 가능 (OS는 라이브러리를 통해 지원 가능)
+ 
+ - Loading : 메모리로 올리는 것.
+ 
+### Overlays (예전 이야기임)
+  - 메모리에 프로세스의 부분 중 실제 필요한 정보만을 올림
+  - 프로세스의 크기가 메모리보다 클 때 유용
+  - 운영체제의 지원 없이 사용자에 의해 구현
+  - 작은 공간의 메모리를 사용하던 초창기 시스템에서 수작업으로 프로그래머가 구현
+    - Manual Overlay
+    - 프로그래밍이 매우 복잡해짐
+
+
+### Swapping - 개인적으로 중요한 개념이라고 생각함
+
+- swapping 
+  - 프로세스를 일시적으로 메모리에서 backing store로 쫓아내는 것.
+
+- Backing store(=swap area)
+  - 디스크
+    - 많은 사용자의 프로세스 이미지를 담을 만큼 충분히 빠르고 큰 저장 공간
+- Swap in / Swap out
+  - 일반적으로 중기 스케줄러(swapper)에 의해 swap out 시킬 프로세스 선정
+  - priority-based CPU scheduling algorithm
+    - priority가 낮은 프로세스를 swapped out 시킴
+    - priority가 높은 프로세스를 메모리에 올려 놓음
+    
+  - compile time 혹은 load time binding에서는 원래 메모리 위치로 swap in 해야함.
+  
+  - Execution time binding에서는 추후 빈 메모리 영역 아무 곳에나 올릴 수 있음
+  
+  - swap time은 대부분 transfer time(swap되는 양에 비례하는 시간)임
+  
+  
+(사진4)
+  
+
+### Dynamic Linking
+
+- Linking을 실행시간까지 미루는 기법
+
+#### static linking
+  - 라이브러리가 프로그램의 실행 파일 코드에 포함됨
+  - 실행 파일의 크기가 커짐
+  - 동일한 라이브러리를 각각의 프로세스가 메모리에 올리므로 메모리 낭비 (ex. printf함수의 라이브러리 코드)
+  
+  
+#### Dynamic linking
+  - 라이브러리가 실행시 연결(link)됨
+  - 라이브러리 호출 부분에 라이브러리 루틴의 위치를 찾기 위한 stub이라는 작은 코드를 둠
+  - 라이브러리가 이미 메모리에 있으면 그 루틴의 주소로 가고 없으면 디스크에서 읽어옴
+  - 운영체제의 도움이 필요
+  
+
+## Allocation of Physical Memory
+
+(사진5)
+
+### Continuous Allocation
+
+- Contiguous allocation
+  - 고정분할(Fixed partition) 방식
+    - 물리적 메모리를 몇 개의 영구적 분할(partition)로 나눔
+    - 분할의 크기가 모두 동일한 방식과 서로 다른 방식이 존재
+    - 분할당 하나의 프로그램 적재
+    - 융통성이 없음
+      - 동시에 메모리에 load되는 프로그램의 수가 고정됨
+      - 최대 수행 가능 프로그램 크기 제한
+    - internal fragmentation 발생 (external fragmentation도 발생)
+    
+  - 가변분할(Variable partition) 방식
+    - 프로그램의 크기를 고려해서 할당
+    - 분할의 크기, 개수가 동적으로 변함
+    - 기술적 관리 기법 필요
+    - External fragmentation 발생
+    
+  
+(사진6)
+
+(사진7)
+
+(사진8)
+ 
+
+## Paging
+
+- paging
+  - process의 virtual memory를 동일한 사이즈의 page 단위로 나눔
+  - virtual memory의 내용이 page 단위로 noncontiguous하게 저장됨
+  - 일부는 backing storage에, 일부는 physical memory에 저장
+  
+- Basic Method
+  - physical memory를 동일한 크기의 frame으로 나눔
+  - logical memory를 동일 크기의 page로 나눔(frame과 같은 크기)
+  - 모든 가용 frame들을 관리
+  - page table을 사용하여 logical address를 physical address로 변환
+  - External fragmentation 발생 안함
+  - Internal fragmentation 발생 가능
