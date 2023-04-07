@@ -178,3 +178,53 @@
   - page table을 사용하여 logical address를 physical address로 변환
   - External fragmentation 발생 안함
   - Internal fragmentation 발생 가능
+
+### Paging Example
+
+<img width="606" alt="스크린샷 2023-04-06 오후 7 32 32" src="https://user-images.githubusercontent.com/71378447/230564792-16f8290b-fad8-43e7-93ee-a1a9a4339308.png">
+
+<img width="606" alt="스크린샷 2023-04-06 오후 7 35 31" src="https://user-images.githubusercontent.com/71378447/230564827-02838fe4-8a67-4cf9-84c5-9fce2bba0924.png">
+
+### Implementation of Page Table
+
+- Page table은 main memory에 상주함 
+  - (개인적으로 궁금하던 부분이었는데 해결됨)
+  
+- **Page-table base register(PTBR)**가 page table을 가리킴
+- **Page-table length register (PTLR)**가 테이블 크기를 보관
+
+- 모든 메모리 접근 연산에는 2번의 memory access 필요
+- page table 접근 1번, 실제 data/instruction 접근 1번
+- 속도 향상을 위해 associative register 혹은 **translation look-aside buffer(TLB)**라 불리는 고속의 lookup hardware cache 사용
+
+<img width="610" alt="스크린샷 2023-04-06 오후 7 42 48" src="https://user-images.githubusercontent.com/71378447/230564856-7471f026-a6d5-4341-9df0-6dbea78198ff.png">
+
+
+### Associative Register
+
+- Associative registers(TLB): parallel search가 가능
+  - TLB에는 page table 중 일부만 존재
+  
+- Address translation
+  - page table 중 일부가 associative register에 보관되어 있음
+  - 만약 해당 page #가 associative register에 있는 경우 곧바로 frame #을 얻음
+  - 그렇지 않은 경우 main memory에 있는 page table로부터 frame #을 얻음
+  - TLB는 context switch 때 flush (remove old entries)
+
+
+### Effective Access Time
+
+<img width="602" alt="스크린샷 2023-04-06 오후 7 53 03" src="https://user-images.githubusercontent.com/71378447/230564874-0228c7d6-0154-4bf7-8389-c56a22a5700a.png">
+
+
+### Two-Level Page Table (2단계 페이지 테이블)
+
+<img width="607" alt="스크린샷 2023-04-06 오후 8 57 57" src="https://user-images.githubusercontent.com/71378447/230564896-590a63e7-3f8a-4451-b16a-dd1702265821.png">
+
+
+<img width="606" alt="스크린샷 2023-04-06 오후 8 00 56" src="https://user-images.githubusercontent.com/71378447/230564909-46397111-0235-4835-9538-d280e699aaf5.png">
+
+
+<img width="607" alt="스크린샷 2023-04-06 오후 9 05 03" src="https://user-images.githubusercontent.com/71378447/230564920-e989c73a-fc56-49e1-a53b-82fde7e8c64f.png">
+
+
