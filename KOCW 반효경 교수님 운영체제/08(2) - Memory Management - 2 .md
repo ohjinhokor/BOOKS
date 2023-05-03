@@ -71,7 +71,15 @@
 
 <img width="605" alt="스크린샷 2023-05-03 오후 10 12 06" src="https://user-images.githubusercontent.com/71378447/235926877-a55935b9-bcba-4f87-8b3f-93e90485b3d7.png">
 
+## Example of Segmentation
 
----------------------------
+<img width="608" alt="스크린샷 2023-05-03 오후 10 26 19" src="https://user-images.githubusercontent.com/71378447/235936706-bbe30985-a201-4dd8-85f6-d5523fc0ef84.png">
 
+## Sharing of Segments
+
+<img width="602" alt="스크린샷 2023-05-03 오후 10 36 36" src="https://user-images.githubusercontent.com/71378447/235936762-4d335a4b-84e2-4fb5-a323-6169746baa3b.png">
+
+## Segmentation with Paging
+
+<img width="606" alt="스크린샷 2023-05-03 오후 10 46 03" src="https://user-images.githubusercontent.com/71378447/235936828-18df075e-dd20-4151-93dc-5f584abb45bc.png">
 
