@@ -184,6 +184,3 @@
 
 
 <img width="606" alt="스크린샷 2023-01-28 오후 5 12 28" src="https://user-images.githubusercontent.com/71378447/215255398-1093e362-b9b5-407b-a3f0-50308958bcb0.png">
-
-
-<img width="606" alt="스크린샷 2023-01-28 오후 5 21 15" src="https://user-images.githubusercontent.com/71378447/215255476-bcccc2c0-c97b-4690-bf4b-c9fe67f2b865.png">
