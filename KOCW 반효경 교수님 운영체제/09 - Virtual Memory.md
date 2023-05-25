@@ -101,3 +101,95 @@
 
 <img width="606" alt="스크린샷 2023-05-16 오전 2 08 13" src="https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/e41871cf-478f-4f13-9dcc-da6ed915d051">
 
+
+## Page Frame의 Allocation
+
+- Allocation problem : 각 process에 얼마만큼의 page frame을 할당 할 것인가?
+
+- Allocation의 필요성 
+  - 메모리 참조 명령어 수행시 명령어, 데이터 등 여러 페이지 동시 참조
+    - 명령어 수행을 위해 최소한 할당되어야 하는 frame수가 있음
+  - Loop를 구성하는 page들은 한꺼번에 allocate되는 것이 유리함
+    - 최소한의 allocation이 없으면 매 loop마다 page fault
+    
+
+- Allocation Scheme
+  - Equal allocator : 모든 프로세스에 똑같은 갯수 할당
+  - Proportional allocation : 프로세스 크기에 비례하여 할당
+  - Priority allocator : 프로세스의 priority에 따라 다르게 할당
+  
+
+## Global vs Local Replacement
+
+- Global replacement
+  - Replace시 다른 process에 할당된 frame을 빼앗아 올 수 있다.
+  - Process별 할당량을 조절하는 또 다른 방법임
+  
+  - FIFO, LRU, LFU 등의 알고리즘을 global replacement로 사용시에 해당
+  - Working set, PFF 알고리즘 사용
+
+- Local replacement
+  - 자신에게 할당된 frame 내에서만 replacement
+  
+  - FIFO, LRU, LFU등의 알고리즘을 process별로 운영
+
+## Thrashing
+
+- 프로세스의 원활한 수행에 필요한 최소한의 page frame 수를 할당 받지 못한 경우 발생
+
+- Page fault rate가 매우 높아짐
+- CPU utilization이 낮아짐
+- OS는 MPD(Multiprogramming degree)를 높여야 한다고 판단
+- 또 다른 프로세스가 시스템에 추가됨(higher MPD)
+
+### Thrashing Diagram
+
+<img width="602" alt="스크린샷 2023-05-17 오후 7 36 27" src="https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/1b666ba6-7f86-4fff-9160-663552d4faea">
+
+
+## Working-Set Model
+
+- Locality of reference
+  - 프로세스는 특정 시간 동안 일정 장소만을 집중적으로 참조한다.
+ 
+  - 집중적으로 참조되는 해당 page들의 집합을 locality set이라 함
+
+
+- Working-set Model
+  - Locality에 기반하여 프로세스가 일정 시간 동안 원활하게 수행되기 위해 한꺼번에 메모리에 올라와 있어야 하는 page들의 집합을 **Working Set**이라 정의함
+  
+  - Working Set 모델에서는 process의 working set 전체가 메모리에 올라와 있어야 수행되고, 그렇지 않을 경우 모든 frame을 반납한 후 swap out(suspend)
+  - Thrashing 을 방지하기 위함
+  - Multiprogramming degree를 결정함
+  
+### Working-Set Algorithm
+
+<img width="600" alt="스크린샷 2023-05-17 오후 7 43 48" src="https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/c5e2c01b-af9b-4231-a2bc-f3bc4403d3bf">
+
+<img width="602" alt="스크린샷 2023-05-17 오후 7 44 13" src="https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/8075c6bd-5f31-4b94-8a32-05ec3dca831a">
+
+
+## PFF(Page Fault Frequency) Scheme
+
+<img width="603" alt="스크린샷 2023-05-17 오후 7 47 25" src="https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/72662c96-6f2f-4fdf-b1fc-c9b6bc021b78">
+
+
+## Page Size의 결정
+
+- page size를 감소시키면
+  - 페이지 수 증가
+  
+  - 페이지 테이블 크기 증가
+  - Internal fragmentation 감소
+  - Disk transfer의 효율성 감소
+    - Seek/rotation vs transfer
+  - 필요한 정보만 메모리에 올라와 메모리 이용이 효율적
+    - Localty의 활용 측면에서는 좋지 않음
+  
+  
+- Trend
+  - Larger page size
+  
+
+
+
