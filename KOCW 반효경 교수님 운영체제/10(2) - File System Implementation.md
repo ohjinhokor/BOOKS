@@ -85,3 +85,46 @@
 <img width="601" alt="스크린샷 2023-05-25 오후 10 35 53" src="https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/98285e49-172f-4eac-a499-6c602a5ecfa6">
 
 <img width="598" alt="스크린샷 2023-05-25 오후 10 38 41" src="https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/257101b2-c23d-4f31-a031-ec3a0a31d6c0">
+
+
+## Directory Implementation
+
+![스크린샷 2023-05-31 오후 1 49 38](https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/0830ff61-d7d9-41c1-b826-815eb239cad0)
+
+![스크린샷 2023-05-31 오후 1 53 28](https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/ee8f7f9d-66a9-4fa0-8d29-5e2b7b7ef111)
+
+## VFS and NFS
+
+- Virtual File System(VFS)
+  - 서로 다른 다양한 file system에 대해 동일한 시스템 콜 인터페이스(API)를 통해 접근할 수 있게 해주는 OS의 layer
+  
+- Network File System(NFS)
+  - 분산 시스템에서는 네트워크를 통해 파일이 공유될 수 있음
+  - NFS는 분산 환경에서의 대표적인 파일 공유 방법임
+
+
+## Page Cache and Buffer Cache
+
+- Page Cache
+  - Virtual memory의 paging system에서 사용하는 page frame을 caching의 관점에서 설명하는 용어
+ 
+- Memory-Mapped I/O
+  - File의 일부를 virtual memory에 mapping 시킴
+  - 매핑시킨 영역에 대한 메모리 접근 연산은 파일의 입출력을 수행하게 함
+  
+- Buffer Cache
+  - 파일 시스템을 통한 I/O 연산은 메모리의 특정 영역인 buffer cache 사용
+  - File 사용의 localty 활용
+    - 한 번 읽어온 block에 대한 후속 요청시 buffer cache에서 즉시 전달
+  - 모든 프로세스가 공용으로 사용
+  - Replacement algorithm 필요 (LRU, LFU 등)
+ 
+ 
+- Unified Buffer Cache
+  - 최근의 OS에서는 기존의 buffer cache가 page cache에 통합됨
+
+![스크린샷 2023-05-31 오후 2 27 11](https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/a4c6b68c-57fe-4a3c-8aab-7e5f979e788d)
+
+![스크린샷 2023-05-31 오후 2 28 31](https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/60868d11-9cd0-420b-982f-4702b8655558)
+
+
