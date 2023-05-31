@@ -41,3 +41,25 @@
 
 <img width="547" alt="스크린샷 2023-05-31 오후 10 38 21" src="https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/a0128635-c301-4a41-9691-a557991fbe52">
 
+
+## Swap-Space Management
+
+- Disk를 사용하는 두 가지 이유
+  - memory의 volatile한 특성 -> file system
+  
+  - 프로그램 실행을 위한 memory 공간 부족 -> swap space (swap area)
+
+
+- Swap-space
+  - Virtual memory system에서는 디스크를 memory의 연장 공간으로 사용
+  - 파일 시스템 내부에 둘 수도 있으나, 별도 partition 사용이 일반적
+    - 공간 효율성보다는 속도 효율성이 우선
+    - 일반 파일보다 훨씬 짧은 시간만 존재하고 자주 참조됨
+    - 따라서, block의 크기 및 저장 방식이 일반 파일 시스템과 다름
+    
+<img width="593" alt="스크린샷 2023-05-31 오후 10 55 28" src="https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/dbce1fe1-a231-4a1b-bb88-acef832ac520">
+
+
+## RAID (간단하게만 짚고 넘어감)
+
+<img width="571" alt="스크린샷 2023-05-31 오후 10 57 42" src="https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/65915b95-7fac-4782-97f4-7ee488abdf4c">
