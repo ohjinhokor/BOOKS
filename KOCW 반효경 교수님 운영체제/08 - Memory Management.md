@@ -30,7 +30,7 @@
   - Loader의 책임하에 물리적 메모리 주소 부여
   - 컴파일러가 재배치가능코드(relocatable code)를 생성한 경우 가능
   
-- **Execution time binding (= Run time binding)**
+- **Execution time binding (= Runtime binding)**
   - 수행이 시작된 이후에도 프로세스의 메모리 상 위치를 옮길 수 있음.
   - CPU가 주소를 참조할 때마다 binding을 점검(address mapping table)
   - 하드웨어적인 지원이 필요함(base and limit register, MMU)
@@ -40,7 +40,7 @@
 
 
 
-** 현대 운영체제는 주로 run time binding을 사용함**
+** 현대 운영체제는 주로 runtime binding을 사용함**
 **따라서 cpu가 바라보는 주소는 logical address임!**
 
 
