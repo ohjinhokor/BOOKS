@@ -63,7 +63,9 @@
 ---
 
 - multi procssor : cpu가 여러개 있음을 의미함. 위의 내용과 다름
- 
+
+<img width="605" alt="image" src="https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/bfcd4719-c981-466d-a490-17f4b0e01ca0">
+
  
 ## 4. 운영 체제의 구조(어떤걸 배우게 될까)
 - CPU 스케줄링을 어떻게 할 것인가
