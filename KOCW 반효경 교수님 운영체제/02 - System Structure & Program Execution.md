@@ -41,8 +41,8 @@
 - I/O는 실제 device와 local buffer 사이에서 일어남
 - Device controller는 I/O가 끝났을 경우 interrupt로 CPU에 그 사실을 알림
 
-참고)
 device driver(장치 구동기) : OS 코드 중 각 장치별 처리 루틴 -> software
+
 device controller(장치 제어기) : 각 장치를 통제하는 일종의 작은 CPU -> hardware
 
 &nbsp;
