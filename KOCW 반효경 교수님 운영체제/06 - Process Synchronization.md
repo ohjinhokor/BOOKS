@@ -22,6 +22,9 @@
 
 #### 2. Process가 system call을 하여 kernel mode로 수행 중인데, context switch가 일어나는 경우
 
+<img width="610" alt="스크린샷 2023-08-20 오후 11 43 40" src="https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/0e56f5c7-a956-4940-83bb-f97608b4dcf1">
+
+
 <img width="609" alt="스크린샷 2023-02-07 오후 10 35 08" src="https://user-images.githubusercontent.com/71378447/217265200-dcc20f1b-5de9-45d8-a395-92306476e729.png">
 
 
