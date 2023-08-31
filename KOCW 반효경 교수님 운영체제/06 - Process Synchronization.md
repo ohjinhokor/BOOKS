@@ -125,6 +125,9 @@
 
 <img width="606" alt="스크린샷 2023-02-08 오전 12 44 34" src="https://user-images.githubusercontent.com/71378447/217301408-00a1387e-0c51-4edb-9a38-aa4fb0fcdc8e.png">
 
+
+<img width="920" alt="스크린샷 2023-08-31 오전 9 36 41" src="https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/dd7e6697-7eeb-4142-8310-b1ad648c3e8c">
+
   
 <img width="598" alt="스크린샷 2023-02-08 오전 12 50 29" src="https://user-images.githubusercontent.com/71378447/217301439-1377af95-4f7d-4dce-b36e-8fcb7ce9ce8c.png">
 
