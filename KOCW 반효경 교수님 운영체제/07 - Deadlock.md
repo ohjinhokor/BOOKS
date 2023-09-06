@@ -158,3 +158,6 @@
     - Starvatioin문제
       - 동일한 프로세스가 계속해서 victim으로 선정되는 경우
       - cost factor에 rollback 횟수도 같이 고려
+     
+        
+![스크린샷 2023-09-06 오후 5 02 24](https://github.com/ohjinhokor/BOOKS-and-LECTURES/assets/71378447/491a6279-db43-4ced-afd8-457df9a8989a)
